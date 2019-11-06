@@ -23,8 +23,11 @@
 <% else %>
   <ul>
     <% @restaurant.reviews.each do |review| %>
-      <li>
+      <li style="list-style: none;">
         <%= review.content %>
+      </li>
+      <li style="list-style: none;">
+        <%= review.rating %>
       </li>
     <% end %>
   </ul>

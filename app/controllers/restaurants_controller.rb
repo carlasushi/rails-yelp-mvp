@@ -8,6 +8,14 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  def update
+   if @restaurant.update(restaurant_params)
+     redirect_to restaurant_path(@restaurant)
+   else
+     render :edit
+   end
+  end
+
   def new
     @restaurant = Restaurant.new
   end
