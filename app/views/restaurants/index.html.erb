@@ -1,0 +1,8 @@
+<div class="container">
+  <button type="button" class="btn btn-link"><%= link_to "Add New Restaurant", new_restaurant_path %></button>
+  <% @restaurants.each do |restaurant| %>
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <p>Address: <%= restaurant.address %></p>
+<% end %>
+</div>
+
